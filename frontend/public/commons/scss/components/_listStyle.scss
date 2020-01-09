@@ -1,0 +1,142 @@
+.h-basic-list01{
+    & > li {
+        position:relative;
+        font-size:16px; color:#4e5983; line-height:16px;
+        padding-left:10px; margin-bottom:15px;
+        &:last-child {margin-bottom:0;}
+        
+        &::after {
+            content:'';
+            position:absolute; top:7px; left:0;
+            width:5px; height:1px; 
+            background-color:#4e5983;
+        }
+    }
+}
+.h-basic-list02{
+    & > li {
+        position:relative;
+        font-size:14px; color:#868daa;
+        padding-left:40px; margin-bottom:15px;
+        &:last-child {margin-bottom:0;}
+        
+        & > span.tit {
+            position:absolute; top:0; left:0;
+            width:21px; height:21px; line-height:21px;
+            font-size:13px; color:#fff; text-align:center;
+            background-color:#6f789a; border-radius:50%;
+
+        }
+        & > input {
+            width:100%; height:30px; 
+            font-size:14px; color:#868daa;
+            border:1px solid #dadde5;
+            padding:0 15px; box-sizing:border-box;
+        }
+    }
+}
+
+.h-basic-list03 {
+    & > li {
+        position:relative;
+        font-size:14px; color:#868daa; line-height:14px;
+        padding-left:7px; margin-bottom:5px;
+        &:last-child {margin-bottom:0;}
+        
+        &::after {
+            content:'';
+            position:absolute; top:7px; left:0;
+            width:2px; height:2px; 
+            background-color:#868daa;
+        }
+    }
+}
+
+.h-text-list01 {
+    margin-bottom:20px;
+    &:last-child {margin-bottom:0;}
+    // text 4
+    & > .h-tit{
+        font-size:14px; font-family:NanumGothicBold; color:#4e5983;
+        &.h-point {
+            position:relative; overflow:hidden;
+            &:before {
+                content:'*'; 
+                position:absolute; left:0; top:0;
+                width:14px; height:14px;
+                font-size:14px; color:#c14e5d;
+            }
+        }
+    }
+    & input:not([type=button]), & select {
+        width:100%;
+        background-color:transparent; 
+        border: unset; border-bottom:1px solid #e1e2e6;
+        padding:5px 0;
+        &:disabled {
+            background-color:#e3e6ea;
+            border:0;
+        }
+    } 
+    & .h-datepicker {
+        // defalt set
+        @include tagFlexCalculation("100%",'20px');
+         &.h-w{
+            &-8per { @include tagFlexCalculation("8.33%",'20px'); }
+            &-9per { @include tagFlexCalculation("9.09%",'20px'); }
+		    &-10per { @include tagFlexCalculation("10%",'20px'); }
+            &-11per { @include tagFlexCalculation("11%",'20px'); }
+            &-12per { @include tagFlexCalculation("12%",'20px'); }
+            &-14per { @include tagFlexCalculation("14%",'20px'); }
+            &-16per { @include tagFlexCalculation("16%",'20px'); }
+		    &-20per { @include tagFlexCalculation("20%",'20px'); }
+	        &-25per { @include tagFlexCalculation("25%",'20px'); }
+		    &-30per { @include tagFlexCalculation("30%",'20px'); }
+	        &-33per { @include tagFlexCalculation("33.33%",'20px'); }
+		    &-40per { @include tagFlexCalculation("40%",'20px'); }
+		    &-50per { @include tagFlexCalculation("50%",'20px'); }
+		    &-60per { @include tagFlexCalculation("60%",'20px'); }
+		    &-70per { @include tagFlexCalculation("70%",'20px'); }
+		    &-80per { @include tagFlexCalculation("80%",'20px'); }
+		    &-90per { @include tagFlexCalculation("90%",'20px'); }
+		    &-100per { @include tagFlexCalculation("100%",'20px'); }
+		}
+    } 
+    & .ui-datepicker-trigger {
+         width:12px; height:11px; 
+     }
+     
+     .h-combi-btn {
+          width:unquote("-webkit-calc(100% - 70px)") !important;
+          width:unquote("-moz-calc(100% - 70px)") !important;
+          width:unquote("calc(100% - 70px)") !important;
+     }
+   
+}
+.h-text-list02 { 
+	display:flex; flex-direction: row; flex-wrap:wrap;
+	margin:20px 0;
+	// row style
+	& > * {
+	   font-size:14px; color:#868daa; line-height:14px;
+	   border-right:2px solid #e2e6f5;
+	   padding:0 10px;
+	   &:first-child { padding-left:0; }
+	   &:last-child {
+	       border-right:0;
+	   } 
+	}
+}
+
+.h-tag-list01 {
+	display:flex; felx-direction: row; flex-wrap:wrap;
+	flex:0 0 100%;
+	margin:10px 0;
+	& > * {
+	   flex:none;
+	   font-size:14px; font-family:NanumGothicBold; color:#868daa;
+	   background-color:#fafafa; border-radius:10px;
+	   padding:7px 25px; margin-right:10px; 
+	   &:last-child {margin-right:0;}
+	}
+}
