@@ -1,0 +1,28 @@
+{
+  "development": {
+    "username": "root",
+    "password": "joinlife0805",
+    "database": "joinlife",
+    "host": "54.180.115.103",
+    "port" : "3306",
+    "dialect": "mysql",
+    "operatorsAliases": false
+  },
+    "production": {
+    "username": "root",
+    "password": "joinlife0805",
+    "database": "joinlife",
+    "host": "54.180.115.103:3306",
+    "port" : "3306",
+    "dialect": "mysql",
+    "operatorsAliases": false
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "operatorsAliases": false
+  }
+}
