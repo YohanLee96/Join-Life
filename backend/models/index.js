@@ -31,6 +31,12 @@ Object.keys(db).forEach(modelName => {
   }
 });
 
+//테이블 정의
+db.tb_user = require("./t_user")(sequelize, Sequelize);
+
+
+
+
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
