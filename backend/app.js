@@ -8,6 +8,9 @@ var mainRouter = require('./routes/main/mainController');
 
 var app = express();
 
+//vue 연동 라이브러리
+app.use(require("connect-history-api-fallback")());
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
