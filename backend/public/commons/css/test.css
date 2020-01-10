@@ -1,0 +1,33 @@
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#mainHeaderGigsContainer {
+  width: 100%;
+  height: 538px;
+  background-color: #FAE57C;
+  overflow: hidden;
+}
+
+.container-1170 {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+#kmongAboutNavBar .height-80px, #kmongNavBar .height-80px {
+  height: 80px;
+}
+
+.flex-between-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=test.css.map */

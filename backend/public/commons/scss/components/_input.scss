@@ -1,0 +1,359 @@
+
+  .h-btn-calendar{
+	display:inline-block;
+	width:12px;
+	height:11px;
+	background:url('../images/icon/icon_calender.png') no-repeat;	
+	margin:0 3px;
+  }
+
+/*input*/
+ /*checkbox*/
+.h-checkbox-style01 {
+	display:none;
+	/* h-checkbox-style01 + label */
+	& + label {
+	    display:inline-block; 
+	    min-width:12px; min-height:12px; padding-left:17px; 
+	    background-image:url('../images/icon/icon_checkbox01.png');
+	    background-position:left center; 
+	    background-repeat:no-repeat;
+	    cursor:pointer;
+	} 
+	/* h-checkbox-style01 */
+	&:checked + label {background-image:url('../images/icon/icon_checkbox01_on.png');}
+	&:disabled + label {background-image:url('../images/icon/icon_checkbox01_disabled.png');}
+}
+ /*radio*/
+ .h-radio-style01 {
+    display:none;
+    /* h-radio-style01 + label */
+    &[type="radio"] + label{
+        display:inline-block; 
+         
+        background:url('../images/icon/icon_radio01.png') no-repeat left center; 
+        height:20px;
+        margin-right:5px; padding-left:18px;
+        vertical-align:middle;
+        font-size:12px; color:#4e5983;
+        cursor:pointer;
+    }
+    
+    /* h-checkbox-style01 */
+    &:checked + label {background:url('../images/icon/icon_radio01_on.png') no-repeat left center;}
+ }
+ /*switch*/
+ .h-switch-style01 {
+ 	/**/
+ 	position:relative; display:inline-block; width:36px; height:17px; border-radius:20px;
+ 	vertical-align:middle;
+ 	& > input {
+ 		opacity:0; width:0; height:0;
+ 		
+ 		/**/
+ 		&:checked + .slider {
+ 			background-color:#47bdb3;
+ 			
+ 			&:before {-webkit-transform: translateX(19px); -ms-transform: translate(19px); transform: translate(19px)}
+ 			&~ .txt {
+	            display:none;
+	        }
+ 		}
+ 		/**/
+ 		&:disabled + .slider{background-color:#e5e5e5;}
+ 	}
+ 	& > .slider {
+ 		border-radius:20px; position:absolute; cursor: pointer; top:0; left:0; right:0; bottom:0; background-color:#868daa; -webkit-transition: .4s; transition:.4s;
+ 		
+ 		&:before {position:absolute; content: ""; width:13px; height:13px; left:2px; top:50%; margin-top:-6.5px; background-color: #fff; border-radius:50%; -webkit-ransition:.4s; transition:.4s;}
+ 	}
+ 	
+ 	& .txt {
+        position:absolute; right:10px; top:2px;
+        font-size:13px; color:#fff;
+    }
+} 
+
+  
+ /* style1 */
+ .h-in-text-style01 {
+	border:0; border-bottom:1px solid #7d84a0;
+	@include inputTextBox(12px 5px,100%,unset,unset,14px,#7d84a0,transparent);
+	
+	&::placeholder {color:#7d84a0;}
+	&:focus, &:hover {
+		color:#47bdb3; border-bottom:1px solid #47bdb3;
+		
+		&::placeholder {color:#47bdb3;}
+	}
+	&:disabled {
+       color: #fff;
+	   border:1px solid #e3e6ea;
+	   background-color: #e3e6ea;
+	}
+}
+
+/* style2 */
+.h-in-text-style02{
+	@include inputTextBox(0 23px, 100%, 33px, 33px, 14px, #4e5983,transparent);
+	 border:1px solid #dedede; border-radius:15px;box-sizing:border-box; text-align:left;
+	
+	&:focus, &:hover {
+		color:#47bdb3; border:1px solid #47bdb3;
+		
+		&::placeholder {color:#47bdb3};
+	}
+}
+
+/* style3 */
+.h-in-text-style03 {
+@include inputTextBox(0 23px, 100%, 40px, 40px, 14px, #4e5983,transparent);
+	border:1px solid #dedede; border-radius:3px;text-align:left;
+	
+	&:focus, &:hover {
+		color:#47bdb3; border:1px solid #47bdb3;
+		
+		::placeholder {color:#47bdb3;}
+	}
+}
+
+
+/**/
+.h-prime-search{
+	padding:0 3px 7px 3px; overflow:hidden;
+	& > input {
+	background: url('../images/icon/icon_easy_search.png') no-repeat 2px center;
+	padding:0 10px 0 41px;
+	width: 98%; 
+	height:35px; 
+	line-height:35px;
+	box-sizing:border-box; 
+	border:none;
+	border-bottom:1px solid #9da2ba; 
+	font-size:$font14; 
+	color:#868daa;
+	margin-right:20px;
+	&::placeholder {color:#868daa;}
+	}
+}
+
+/**/
+.h-in-calender01 {background:url('../images/icon/icon_calender.png')}
+
+
+.h-input-area {
+	margin-left:5px;
+	position:relative;
+	/*h-input-area -input*/
+	&-input {
+        width:100%; min-height:23px;
+        border: 0;
+        padding: 0px 20px 0px 3px; margin: 0;
+        color: #666;
+        vertical-align: middle;
+        outline: none;        
+	}
+	/* h-input-area -button */
+	&-button , .ui-datepicker-trigger {
+	   position:absolute; right:5px; top:50%; transform:translateY(-50%);
+	   /*h-input-area-button.calender*/
+	   &.calender{
+		   width:11px; height:11px;
+		   background:url('../images/icon/icon_calender.png');
+	   }
+	   /* h-input-area-button .search */
+	   &.search {
+	       width:12px; height:12px;
+	       background:url('../images/icon/icon_search02.png');
+	       background-size:12px;
+	   }
+	   &.delete {
+           width:12px; height:12px;
+           right:10px;
+           background:url('../images/icon/icon_cancel01.png');
+           background-size:12px; 
+       }
+	}
+}
+
+.h-input-fold {
+	position:relative;
+}
+
+// textarea
+.h-textarea{
+    &-style01 {
+      border: 1px solid #7d84a0; min-height:100px;
+    }
+    &-style02 {
+      border: 1px solid #dadde5; min-height:80px;
+    }
+}
+
+// input [file]
+.h-file-upload-style01 {
+	flex:1;
+	
+	.h-file-upload {
+	   //h-file-upload-btn
+	   &-btn {
+		       width:100%;
+		       padding:20px;
+		       text-align:center;
+	       & > input {
+		       font-size:14px; color:#4e5983;
+		       background:transparent; border:unset;
+	       }  
+	       &:after {
+	           display:inline-block; content:'';
+	           width:13px; height:13px;  
+	           background:url('../images/icon/icon_add01.png') no-repeat;
+	           vertical-align:middle;
+	           margin:0 10px;
+	           margin-top:-2px;
+	       }
+	   }
+	   //h-file-upload-state
+       &-state {
+           font-size:13px; font-family:NanumGothicBold; color:#4e5983; text-align:left;
+           padding:20px;
+           border:unset; background-color:unset;
+       }
+	   //h-file-upload-list
+	   &-list  {
+	       border-radius:15px; background-color:#f6f6fe;
+	       padding:5px 20px; 
+	       
+		   & > li{
+		       font-size:13px; color:#666; text-align:left; 
+		       background:url('../images/icon/icon_trash01.png') no-repeat right center transparent; border-bottom:1px solid #e9eaef;
+		       padding:10px;
+		       &:last-child {
+		          border-bottom:0; 
+		       }
+		   }
+        }
+	}
+}
+
+// input button
+.h-btn {
+	& > input:disabled{
+	   border:1px solid #a7a9ac; background-color:#a7a9ac;
+	   &:hover {border:1px solid #a7a9ac; background-color:#a7a9ac; color:#7d84a0;}
+	}
+	.h-icon {
+		&-add {
+		   background:url('../images/icon/icon_plus01.png') no-repeat 13px center;
+		   &:hover:not(:disabled) {background:url('../images/icon/icon_plus01_on.png') no-repeat 13px center;}
+	   }
+		&-copy{
+		   background:url('../images/icon/icon_copy01.png') no-repeat 13px center;
+		   &:hover:not(:disabled) {background:url('../images/icon/icon_copy01_on.png') no-repeat 13px center;}
+		}
+		&-save{
+		   background:url('../images/icon/icon_file01.png') no-repeat 13px center;
+		   &:hover:not(:disabled) {background:url('../images/icon/icon_file02.png') no-repeat 13px center;}
+	    }
+		&-down {
+		   background:url('../images/icon/icon_down01.png') no-repeat 13px center;
+		   &:hover:not(:disabled) {background:url('../images/icon/icon_down02.png') no-repeat 13px center;}
+		}
+		&-upload {
+		   background:url('../images/icon/icon_up01.png') no-repeat 13px center;
+		   &:hover:not(:disabled) {background:url('../images/icon/icon_up02.png') no-repeat 13px center;}
+		}
+		&-search {
+		   background:url('../images/icon/icon_search02.png') no-repeat 13px center; background-size:12px;
+		   &:hover:not(:disabled) {background:url('../images/icon/icon_search02_on.png') no-repeat 13px center; background-size:12px;}
+		}
+		&-default {
+		   background:url('../images/icon/icon_arrow_right01.png') no-repeat 13px center;
+		   &:hover:not(:disabled) {background:url('../images/icon/icon_arrow_right01_on.png') no-repeat 13px center;}
+		}
+		&-delete {
+		   background:url('../images/icon/icon_trash01.png') no-repeat 13px center;
+		   &:hover:not(:disabled) {background:url('../images/icon/icon_trash01_on.png') no-repeat 13px center;}
+		}
+		&-print {
+		   background:url('../images/icon/icon_print01.png') no-repeat 13px center;
+		   &:hover:not(:disabled) {background:url('../images/icon/icon_print01_on.png') no-repeat 13px center;}
+		}
+		&-full {margin-left:6px;width:20px; height:18px; text-indent:-9999px;background:url('../images/icon/icon_full.png') no-repeat; border:0; padding:0; border-radius:unset;}
+	}
+}
+
+
+//combination
+.h-input-text-combi-wrap {
+	display:inline-flex;  
+	padding:10px 15px;
+	&.h-combi-design{
+		background-color:#fbfcfe; border:1px solid #c2c6d4; border-radius:15px;
+	}
+	& > * {
+	   flex:auto; padding:0 10px; border-right:1px solid #c2c6d4;
+	   &:last-child, &.h-borderDel {
+	       border-right:0;
+	   }
+	}
+	// button
+	&.h-combi-buttonType {
+	   & > * {
+	       flex:auto;
+	       
+	       &.h-btn {
+	           flex:0 0 70px; max-width:70px;
+	       }
+	   }
+	}
+}
+.h-input-text-combi {
+	flex:0 0 100%;
+	display:flex; flex-direction:row; align-items:center;
+	&-tit {
+	   flex:none;
+	   font-size:12px; color:#7d84a0;
+	   &.h-point {
+	       position:relative;
+	       padding-left:10px;
+	       &:after {
+	           content:'*';
+	           position:absolute; left:0; top:0;
+	           font-size:inherit; color:#e11c22;
+	       }
+	   }
+	}
+	&-content {
+	   flex:1;
+	   
+	   &  input:not([type=button]), &  select{
+	       width:100%;
+	       background-color:transparent;
+	       border:0; border-bottom:1px solid #e1e2e6;
+	       padding:5px 0; 
+	       &:disabled {
+	           background-color:#e3e6ea;
+	           border:0;
+	       }
+	   }
+	   
+       
+       & .h-datepicker {
+            width:unquote("-webkit-calc(100% - 20px)") !important;
+            width:unquote("-moz-calc(100% - 20px)") !important;
+            width:unquote("calc(100% - 20px)") !important;
+       } 
+       .h-combi-btn {
+            width:unquote("-webkit-calc(100% - 23px)") !important;
+            width:unquote("-moz-calc(100% - 23px)") !important;
+            width:unquote("calc(100% - 23px)") !important;
+       }
+       & .ui-datepicker-trigger {
+         width:12px; height:11px; 
+       }
+	}
+	&-btn {
+	   flex:none;
+	}
+}

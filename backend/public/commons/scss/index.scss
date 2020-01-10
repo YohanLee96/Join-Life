@@ -1,0 +1,14 @@
+// reset
+@import "base/base";
+
+//layout
+@import "layout/main";
+
+#mainHeaderGigsContainer {width:100%; height:538px; background-color:#FAE57C; overflow:hidden;}
+// width
+.kd-container{
+    &-1170{width:1170px; margin:0 auto;}
+    &-650{width:650px; margin:0 auto;}
+}
+// height 80px
+.kd-height-80 {height:80px;}
