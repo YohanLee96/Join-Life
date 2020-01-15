@@ -6,6 +6,7 @@ router.get('/', function (req, res, next) {
     let jsonArray = {
         'test' : 'test2',
     };
+    console.log('aaaa');
 
     return jsonArray;
 });

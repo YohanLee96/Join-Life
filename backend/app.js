@@ -2,14 +2,12 @@ var createError = require("http-errors");
 var express = require("express");
 var path = require("path");
 var cookieParser = require("cookie-parser");
+var history = require("connect-history-api-fallback");
 var logger = require("morgan");
 
 var mainRouter = require("./routes/main/mainController");
 
 var app = express();
-
-//vue 연동 라이브러리
-app.use(require("connect-history-api-fallback")());
 
 // Sequelize Sync 맞추는 부분
 const models = require("./models");
@@ -25,9 +23,10 @@ models.sequelize
     process.exit();
   });
 
-// view engine setup
+// Front-End는 Vue로 분리해서 개발하기때문에, 뷰템플릿엔진은 필요 없음. 
 //app.set("views", path.join(__dirname, "views"));
 //app.set("view engine", "ejs");
+
 
 app.use(logger("dev"));
 app.use(express.json());
@@ -35,7 +34,18 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
-app.use("/", mainRouter);
+
+//Router 
+app.use("/api", mainRouter);
+
+//Router 끝
+
+/**
+ * vue 연동 모듈
+ * 해당 모듈은 꼭 Router 뒤에서 처리하도록 해야 한다.
+ * */
+app.use(history());
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
