@@ -9,7 +9,7 @@ var mainRouter = require("./routes/main/mainController");
 
 var app = express();
 
-// Sequelize Sync 맞추는 부분
+// Sequelize Sync 
 const models = require("./models");
 models.sequelize
   .sync()
