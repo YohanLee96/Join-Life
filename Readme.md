@@ -9,14 +9,17 @@ Front-End  : Vue.js,jQuery,SCSS,HTML
 DataBase : Mysql
 
 
+- 필수 참고 사항
+1. 백엔드 통신은 꼭 '/api'로 시작해야함.
+2. 
 
-- 주요 npm Module
+- 사용하고있는 npm Module
 
 #Node
 1. express  
 2. sequelize mysql2   
 3. sequelize-cli 
-4. Supervisor(사용법 : supervisor [파일명] )
+4. nodemon
     
 
 
