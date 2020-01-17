@@ -9,9 +9,9 @@ Front-End  : Vue.js,jQuery,SCSS,HTML
 DataBase : Mysql
 
 
+
 - 필수 참고 사항
 1. 백엔드 통신은 꼭 '/api'로 시작해야함.
-2. 
 
 - 사용하고있는 npm Module
 
