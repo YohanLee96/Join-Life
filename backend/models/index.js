@@ -32,7 +32,11 @@ Object.keys(db).forEach(modelName => {
 });
 
 //테이블 정의
+<<<<<<< HEAD
+db.tb_user = require("./t_user")(sequelize, Sequelize);
+=======
 db.tb_user = require("./tb_user")(sequelize, Sequelize);
+>>>>>>> 1613b3670fa17959b751dcdb5d690a2245a2d736
 
 
 

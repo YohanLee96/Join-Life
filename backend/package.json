@@ -3,7 +3,11 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+<<<<<<< HEAD
+      "start": "nodemon ./bin/www"
+=======
     "start": "nodemon ./bin/www"
+>>>>>>> 1613b3670fa17959b751dcdb5d690a2245a2d736
   },
   "author": "YohanLee",
   "license": "MIT",

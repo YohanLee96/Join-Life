@@ -1,12 +1,21 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&display=swap&subset=korean");
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://example.com/MaterialIcons-Regular.eot);
+  /* For IE6-8 */
+  src: local("Material Icons"), local("MaterialIcons-Regular"), url(https://example.com/MaterialIcons-Regular.woff2) format("woff2"), url(https://example.com/MaterialIcons-Regular.woff) format("woff"), url(https://example.com/MaterialIcons-Regular.ttf) format("truetype");
+}
+
 /*style  area*/
-@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
-@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css);
-@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css);
-@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap");
 * {
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 400;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html {
@@ -321,7 +330,7 @@ select:disabled {
 
 /* font-family*/
 .kd-font-bold {
-  font-family: NanumGothicBold;
+  font-weight: 700;
 }
 
 /*font-color*/
@@ -329,7 +338,15 @@ select:disabled {
   color: #4e5983;
 }
 
+.kd-color-blue-dark:hover {
+  color: #4e5983;
+}
+
 .kd-color-grey-light {
+  color: #868daa;
+}
+
+.kd-color-grey-light:hover {
   color: #868daa;
 }
 
@@ -337,8 +354,24 @@ select:disabled {
   color: #47bdb3;
 }
 
+.kd-color-green:hover {
+  color: #47bdb3;
+}
+
 .kd-color-orange {
   color: #fb9c80;
+}
+
+.kd-color-orange:hover {
+  color: #fb9c80;
+}
+
+.kd-color-white {
+  color: #fff;
+}
+
+.kd-color-white:hover {
+  color: #fff;
 }
 
 /* margin*/
@@ -434,9 +467,20 @@ select:disabled {
   max-width: 100%;
 }
 
+.kd-bg-purple {
+  background-color: #6364D8;
+  border-color: #6364D8;
+}
+
+/* /// kd-btn /// */
+.kd-btn {
+  padding: 4px;
+  border-radius: 4px !important;
+}
+
 .kd-header-wrap {
   width: 100%;
-  height: 538px;
+  height: 400px;
   background-color: #FAE57C;
   overflow: hidden;
 }
@@ -486,6 +530,91 @@ select:disabled {
   letter-spacing: -7px;
 }
 
+.kd-content-wrap .kd-main-list {
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.kd-content-wrap .kd-main-list .kd-main-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.kd-content-wrap .kd-main-list .kd-main-header .kd-main-tit {
+  font-size: 17px;
+}
+
+.kd-content-wrap .kd-main-list .kd-main-header .swiper-button-next, .kd-content-wrap .kd-main-list .kd-main-header .swiper-button-prev {
+  position: static;
+  display: inline-block;
+  width: auto;
+  height: auto;
+  font-size: 13px;
+  margin: 0;
+  padding: 0;
+  margin-right: 10px;
+  background: #fff;
+}
+
+.kd-content-wrap .kd-main-list .kd-main-header .swiper-button-next > i, .kd-content-wrap .kd-main-list .kd-main-header .swiper-button-prev > i {
+  border: 1px solid #000;
+}
+
+.kd-content-wrap .kd-main-list .swiper-slide {
+  position: relative;
+  cursor: pointer;
+}
+
+.kd-content-wrap .kd-main-list .swiper-slide:after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(#000), to(#444));
+  background: linear-gradient(to top, #000, #444);
+  opacity: 0.5;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.kd-content-wrap .kd-main-list .swiper-slide:hover:after {
+  -webkit-transition: .5s;
+  transition: .5s;
+  top: 0;
+}
+
+.kd-content-wrap .kd-main-list .swiper-slide:hover > .kd-list-content {
+  color: #FAE57C;
+}
+
+.kd-content-wrap .kd-main-list .swiper-slide > img {
+  width: 100%;
+  height: 100%;
+}
+
+.kd-content-wrap .kd-main-list .swiper-slide > .kd-list-content {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  z-index: 2;
+  width: calc(100% - 10px);
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+}
+
 #mainHeaderGigsContainer {
   width: 100%;
   height: 538px;
@@ -503,7 +632,33 @@ select:disabled {
   margin: 0 auto;
 }
 
+.kd-height-60 {
+  height: 60px;
+}
+
 .kd-height-80 {
   height: 80px;
+}
+
+.kd-input-icon {
+  position: relative;
+}
+
+.kd-input-icon > input {
+  padding-right: 55px;
+  padding-left: 20px;
+  font-size: 25px;
+  font-weight: 700;
+  border: 0;
+  border-radius: 5px;
+}
+
+.kd-input-icon > i {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 40px;
 }
 /*# sourceMappingURL=index.css.map */
