@@ -12,11 +12,7 @@ var app = express();
 // Sequelize Sync 
 const models = require("./models");
 models.sequelize
-<<<<<<< HEAD
   .sync()
-=======
-  .sync() 
->>>>>>> 1613b3670fa17959b751dcdb5d690a2245a2d736
   .then(() => {
     console.log("✓ DB 연결완료.");
     console.log("  CTRL-C로 서버중지.\n");
