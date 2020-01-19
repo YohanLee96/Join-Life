@@ -1,0 +1,14 @@
+/*float_wrap*/
+@mixin clearfix() {
+	&:after {content:'';display:block;clear:both;text-indent:-99999px;}
+}
+
+/*백그라운드 그라데이션*/
+@mixin bgGradetion($startBg, $endBg){
+	background: -moz-linear-gradient(top,  $startBg 0%, $endBg 50%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  $startBg 0%, $endBg 50%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to top,  $startBg 0%, $endBg 50%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6dddddd', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+}
+
+
