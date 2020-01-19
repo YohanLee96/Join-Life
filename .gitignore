@@ -1,4 +1,8 @@
 node_modules
 dist/*
 *.log
+<<<<<<< HEAD
+=======
+config.json
+>>>>>>> 1613b3670fa17959b751dcdb5d690a2245a2d736
 db_config.json
