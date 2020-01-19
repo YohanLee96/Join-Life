@@ -12,7 +12,7 @@ var app = express();
 // Sequelize Sync 
 const models = require("./models");
 models.sequelize
-  .sync()
+  .sync({force:true}) //개발 단계이므로, 서버실행 시마다, 마이그레이션.
   .then(() => {
     console.log("✓ DB 연결완료.");
     console.log("  CTRL-C로 서버중지.\n");

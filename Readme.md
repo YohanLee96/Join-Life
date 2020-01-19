@@ -6,16 +6,15 @@ Back-End : Node.js
 Front-End  : Vue.js,jQuery,SCSS,HTML
 DataBase : Mysql
 
-- 사용하고있는 npm Module
+## Node
 
-#Node
 1. express  
 2. sequelize mysql2   
 3. sequelize-cli 
 4. nodemon
-    
+   
 
+## Vue
 
-#Vue
 1. vue-cli
 2. vue-router
