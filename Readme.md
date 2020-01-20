@@ -16,26 +16,5 @@ DataBase : Mysql
 
 ## Vue
 
-<<<<<<< HEAD
-DataBase : Mysql
-
-
-
-- 필수 참고 사항
-1. 백엔드 통신은 꼭 '/api'로 시작해야함.
-
-- 사용하고있는 npm Module
-
-#Node
-1. express  
-2. sequelize mysql2   
-3. sequelize-cli 
-4. nodemon
-    
-
-
-#Vue
-=======
->>>>>>> 1613b3670fa17959b751dcdb5d690a2245a2d736
 1. vue-cli
 2. vue-router

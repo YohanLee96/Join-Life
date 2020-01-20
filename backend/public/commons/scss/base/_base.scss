@@ -1,10 +1,8 @@
 /*style  area*/
-@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
-@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css);
-@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css);
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&display=swap&subset=korean');
 
-*{font-family:'Noto Sans KR', sans-serif; font-weight:400;}
+
+*{font-family: 'Noto Sans KR', sans-serif; font-weight:400; box-sizing:border-box;}
 html { font-size:100.02%; }
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
 font-family:'Noto Sans KR', sans-serif;
@@ -16,7 +14,7 @@ vertical-align:baseline;
 }
 html, body {width:100%; height:100%;}
 body {
-color:black;
+color:black; 
 background-color:transparent;
 box-sizing:border-box;
 }
@@ -159,21 +157,38 @@ select {
     &11 {font-size:11px;}
 }
 /* font-family*/
-.kd-font-bold { font-family:NanumGothicBold;}
+.kd-font-bold { font-weight:700;}
 
 /*font-color*/
 .kd-color {
 	// blue
-    &-blue-dark { color:#4e5983; }
+    &-blue-dark { 
+		color:#4e5983; 
+		&:hover {color:#4e5983}
+	}
     
     // grey
-    &-grey-light { color:#868daa; }
+    &-grey-light { 
+		color:#868daa; 
+		&:hover {color:#868daa}
+	}
     
     // green
-    &-green { color:#47bdb3;}
+    &-green { 
+		color:#47bdb3;
+		&:hover {color:#47bdb3}
+	}
     
     // orange
-    &-orange { color:#fb9c80;}
+	&-orange { 
+		color:#fb9c80;
+		&:hover {color:#fb9c80}
+	}
+	// white
+	&-white { 
+		color:#fff; 
+		&:hover {color:#fff}
+	}
 }
 
 /* margin*/
@@ -246,4 +261,9 @@ select {
 
 .kd-w {
 	&100 {width:100%; flex:0 0 100%; max-width:100%;}
+}
+
+//bg
+.kd-bg{
+	&-purple {background-color: #6364D8; border-color: #6364D8;}
 }
