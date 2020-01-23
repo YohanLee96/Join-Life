@@ -9,6 +9,7 @@ var mainRouter = require("./routes/main/mainController");
 
 var app = express();
 
+
 // Sequelize Sync 
 const models = require("./models");
 models.sequelize
