@@ -1,7 +1,10 @@
 import Vue from 'vue'
-import header from './header.vue'
+import axios from "axios"
 import router from './router'
-import axios from "axios";
+
+import index from "./index.vue";
+
+
 
 Vue.prototype.$http = axios;
 
@@ -9,7 +12,6 @@ Vue.config.productionTip = false
 
 new Vue({
   router,
-  render: h => h(header)
-}).$mount("#header");
-
+  render : h => h(index)
+}).$mount("#index");
 

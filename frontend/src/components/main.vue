@@ -1,5 +1,5 @@
 <template>
-  <div id="container" class="kd-content-wrap">
+    <div class="kd-content-wrap">
       <section id="list01" class="main menu kd-container-1170 kd-main-list">
         <div class="kd-main-header">
           <h3 class="kd-main-tit"><span class="kd-font-bold">리스트</span> 인기 있어요!</h3>
