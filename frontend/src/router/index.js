@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
+
 // vue cli 사용
 Vue.use(VueRouter)
 
