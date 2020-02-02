@@ -1,44 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <link rel="styleSheet" href="<%= BASE_URL %>commons/css/index.css">
-    <link rel="styleSheet" href="<%= BASE_URL %>commons/css/swiper.min.css">
-    <script src="<%= BASE_URL %>commons/js/swiper.min.js"></script>
-    <title>JoinLife</title>
-  </head>
   <body>
+    <div id="head"></div>
     <div id="index"></div>
-    <script>
-      window.onload = function() {
-        var swiper = new Swiper('#list01', {
-          slidesPerView: 5,
-          spaceBetween: 10,
-          navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-          },
-        });
-        var swiper2 = new Swiper('#list02', {
-            slidesPerView: 5,
-            spaceBetween: 10,
-            navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          },
-        });
-        var swiper3 = new Swiper('#list03', {
-            slidesPerView: 5,
-            spaceBetween: 10,
-            navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          },
-        });
-      }
-    </script>
   </body>
 </html>

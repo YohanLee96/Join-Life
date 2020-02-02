@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
+
 // vue cli 사용
 Vue.use(VueRouter)
 
@@ -13,6 +14,7 @@ const routes = [
     path: "/",
     name: "main",
     //2. 연결할 컴포넌트를 정의
+    
     component: () => import("../components/main.vue")
   },
   {
@@ -45,3 +47,4 @@ const router = new VueRouter({
 })
 
 export default router
+
