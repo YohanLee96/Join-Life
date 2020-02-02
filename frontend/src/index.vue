@@ -1,4 +1,4 @@
-<template>
+<template v-if="routes.name === 'main'">
     <div id="index">
         <header-view></header-view>    
         <router-view />
@@ -13,4 +13,6 @@
             'header-view' : header 
         }
     }
+
+    
 </script>

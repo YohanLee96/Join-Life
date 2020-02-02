@@ -27,7 +27,8 @@ var myVueHeader = Vue.extend({
       { rel: "styleSheet", href: "/commons/css/swiper.min.css" }
     ],
     script: [
-      { type: "text/javascript", src: "/commons/js/swiper.min.js" }
+      { type: "text/javascript", src: "/commons/js/swiper.min.js" },
+      { type: "text/javascript", src: "/commons/js/common.js" }
     ]
   }
 });
