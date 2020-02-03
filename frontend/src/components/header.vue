@@ -3,11 +3,11 @@
     <header class="kd-height-80 kd-flex-y-center kd-mgn-b50">
       <div class="kd-container-1170 kd-header">
         <section class="kd-header-left">
-          <span class="kd-logo kd-mgn-r10">JoinLife</span>
+          <span class="kd-logo kd-mgn-r10"><router-link to="/">JoinLife</router-link></span>
         </section>
         <section class="kd-header-right">
-          <a href="#" class="kd-font15 kd-mgn-r10" v-on:click="linkAccess('login')">로그인</a>
-          <a href="#" class="kd-font15 kd-btn kd-bg-purple kd-color-white" v-on:click="linkAccess('signUp')">회원가입</a>
+          <span class="kd-font15 kd-mgn-r10"><router-link to="login">로그인</router-link></span>
+          <span class="kd-font15 kd-btn kd-bg-purple kd-color-white"><router-link to="signUp">회원가입</router-link></span>
         </section>
       </div> 
     </header>

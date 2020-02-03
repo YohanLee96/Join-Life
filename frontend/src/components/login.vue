@@ -1,7 +1,7 @@
 <template>
     <div class="kd-content-wrap">
         <div class="kd-txt-center kd-container-650">
-            <span class="kd-logo">JoinLife</span>
+            <span class="kd-logo"><router-link to="/">JoinLife</router-link></span>
         </div>
         <div class="kd-container-650 kd-login-box">
             <h3 class="kd-login-tit">로그인</h3>
