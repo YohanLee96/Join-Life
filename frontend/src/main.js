@@ -1,8 +1,9 @@
 import Vue from 'vue'
 import axios from "axios"
 import router from './router'
-import VueHead from "vue-head";
-import index from "./index.vue";
+import VueHead from "vue-head"
+import index from "./index.vue"
+import store from './vuex/store.js'
 
 Vue.prototype.$http = axios;
 
@@ -39,6 +40,7 @@ new myVueHeader().$mount("#head");
 
 new Vue({
   router,
+  store,
   render : h => h(index)
 }).$mount("#index");
 
