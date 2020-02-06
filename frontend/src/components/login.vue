@@ -21,17 +21,29 @@
 </template>
 
 <script>
-    export default {
-        name: 'Login',
-        data: () => ({
-            uid: '',
-            password: ''
-        }),
-        methods: {
-            onSubmit () {
-                console.log(this.uid)
-                console.log(this.password)
+import { mapActions} from 'vuex'
+
+export default {
+    name: 'Login',
+    data: () => ({
+        uid: '',
+        password: ''
+    }),
+    methods: {
+        ...mapActions(['login']),
+        async onSubmit () {
+            try {
+                let loginResult = await this.login({uid: this.uid, password: this.password})
+                if (loginResult) this.goToPages() // 페이지 이동!
+            } catch (err) {
+                console.error(err);
             }
-        }
+        },
+        goToPages () {
+            this.$router.push({
+                name: 'main'
+            })
+        } 
     }
+}
 </script>

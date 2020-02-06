@@ -1,11 +1,13 @@
+// vue js 호출
 import Vue from 'vue'
-import axios from "axios"
+// vue router 호출
 import router from './router'
+// 헤더 호출
 import VueHead from "vue-head"
+// 첫 페이지 호출
 import index from "./index.vue"
+// vuex 관련 패키지
 import store from './vuex/store.js'
-
-Vue.prototype.$http = axios;
 
 Vue.config.productionTip = false
 
