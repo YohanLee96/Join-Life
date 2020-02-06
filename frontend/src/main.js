@@ -8,9 +8,10 @@ import VueHead from "vue-head"
 import index from "./index.vue"
 // vuex 관련 패키지
 import store from './vuex/store.js'
+import axios from 'axios'
 
-Vue.config.productionTip = false
-
+Vue.config.productionTip = false;
+Vue.prototype.$http = axios;
 var myVueHeader = Vue.extend({
   // data: function() {
   //   return {};

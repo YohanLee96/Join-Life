@@ -8,9 +8,9 @@ var logger = require("morgan");
 var passport = require('passport');
 
 var mainRouter = require("./routes/main/mainController");
+var loginRouter = require('./routes/login/loginController');
 
 var app = express();
-
 
 // Sequelize Sync 
 const models = require("./models");
@@ -31,18 +31,16 @@ const passportConfig = require('./passport');
 passportConfig(passport);
 
 
-
-/* Front-End는 Vue로 분리해서 개발하기때문에, 뷰템플릿엔진은 필요 없음. 
+/*Front-End는 Vue로 분리해서 개발하기때문에, 뷰템플릿엔진은 필요 없음. 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
-*/
+#*/
 
 app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
-
 app.use(session({
   resave : false,
   saveUninitialized : false,
@@ -56,12 +54,10 @@ app.use(session({
 app.use(passport.initialize()); //request에 passport 설정 심어주는 부분.
 app.use(passport.session());  //세션에 passport 정보 담기.
 
-
 //Router 
 app.use("/api", mainRouter);
-
+app.use("/api/login",loginRouter);
 //Router 끝
-
 /**
  * vue 연동 모듈
  * 해당 모듈은 꼭 Router 뒤에서 처리하도록 해야 한다.
@@ -82,7 +78,7 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render("error");
+  // res.render("error");
 });
 
 

@@ -16,7 +16,12 @@ module.exports=(passport) => {
             const exUser = await tb_user.findOne({where:{ userId} });
             if(exUser){
                 // request에서 받은 패스워드 암호화하여 매칭되는지 확인. 
-                const result = await bcrypt.compareSync(userPassword,exUser.userPassword);
+                //const result = await bcrypt.compareSync(userPassword,exUser.userPassword);
+
+                const result = false;
+                if(exUser.userPassword == userPassword){
+                    result = true;
+                }
 
                 if(result){
                     done(null,exUser);
