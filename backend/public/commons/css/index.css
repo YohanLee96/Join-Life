@@ -615,6 +615,61 @@ select:disabled {
   color: #fff;
 }
 
+.kd-login-box {
+  border: 1px solid #e4e5ed;
+  border-radius: 30px;
+  margin-top: 30px;
+  padding: 30px;
+}
+
+.kd-login-tit {
+  font-size: 25px;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.kd-login-inputs > input {
+  width: 100%;
+  height: 50px;
+  font-size: 15px;
+  color: #555;
+  border: 1px solid #e6e6e6;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.kd-login-inputs > input:last-child {
+  margin-bottom: 0;
+}
+
+.kd-login-inputs > input::-webkit-input-placeholder {
+  color: #555;
+}
+
+.kd-login-inputs > input:-ms-input-placeholder {
+  color: #555;
+}
+
+.kd-login-inputs > input::-ms-input-placeholder {
+  color: #555;
+}
+
+.kd-login-inputs > input::placeholder {
+  color: #555;
+}
+
+.kd-login-btns .kd-login-btn {
+  width: 100%;
+  height: 50px;
+  font-size: 17px;
+  color: #333;
+  text-align: center;
+  background-color: #ffd400;
+  border-color: #ffd400;
+  border-radius: 20px;
+}
+
 #mainHeaderGigsContainer {
   width: 100%;
   height: 538px;
@@ -629,6 +684,11 @@ select:disabled {
 
 .kd-container-650 {
   width: 650px;
+  margin: 0 auto;
+}
+
+.kd-container-400 {
+  width: 400px;
   margin: 0 auto;
 }
 

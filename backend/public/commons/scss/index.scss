@@ -6,7 +6,8 @@
 @import "components/button";
 
 //layout
-@import "layout/main"; 
+@import "layout/main";
+@import "layout/login"; 
 
 
 
@@ -15,6 +16,7 @@
 .kd-container{
     &-1170{width:1170px; margin:0 auto;}
     &-650{width:650px; margin:0 auto;}
+    &-400{width:400px; margin:0 auto;}
 }
 // height
 .kd-height-60 {height:60px;}
