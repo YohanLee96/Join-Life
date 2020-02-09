@@ -1,11 +1,10 @@
 import axios from "axios";
 
 const getUserInfo = (uid, password) => {
-  alert('getUserInfo');
   return axios.post("/api/login", {
     params: {
-      uid: uid,
-      password: password
+      userId: uid,
+      userPassword: password
     }
   });
 };

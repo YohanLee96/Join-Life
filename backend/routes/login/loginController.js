@@ -6,14 +6,15 @@ const router = express.Router();
 
 /**
  * @Exp 사용자페이지 로그인처리를 위한 Controller
+ * @alias /api/login
  * https://medium.com/hivelab-dev/vue-express-mysql-part3-3161bbb6c624
  */
 
  // 로그인 처리.
- router.post('/login',isNotLogin,(req,res,next)=>{
+ router.get('/',isNotLogin,(req,res,next)=>{
     console.log('aa');
     passport.authenticate('local',(authError,user,info) =>{
-        if(authError){  //
+        if(authError){  //0
             console.error(authError);
             return next(authError);
         }
@@ -41,7 +42,7 @@ const router = express.Router();
     })(req,res,next);
  });
 
- router.get('/login',(req,res,next) =>{
+ router.get('/',(req,res,next) =>{
      console.log('겟로그인!!');
  })
  module.exports = router;
