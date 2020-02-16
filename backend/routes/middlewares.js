@@ -3,7 +3,7 @@
  * @see : 로그인한 사용자,로그아웃한 사용자의 라우터 접근 권한을 분기하기 위해 사용.
  */
 
-exports.isLogin = (req,res,next) =>{
+exports.isLoggedIn = (req,res,next) =>{
     if(req.isAuthenticated()){
         next();
     }else{
@@ -13,7 +13,7 @@ exports.isLogin = (req,res,next) =>{
     }
 };
 
-exports.isNotLogin =(req,res,next) =>{
+exports.isNotLoggedIn =(req,res,next) =>{
     if(req.isAuthenticated()){
         if(!req.isAuthenticated()){
             next();

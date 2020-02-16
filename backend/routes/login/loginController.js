@@ -1,7 +1,7 @@
 const express = require('express');
 const passport = require('passport');
 const {tb_user} = require('../../models');  //모델링
-const {isLogin,isNotLogin} = require('../loginMiddleware'); //로그인 미들웨어
+const {isLoggedIn,isNotLoggedIn} = require('../middlewares'); //로그인 미들웨어
 const router = express.Router();
 
 /**
@@ -11,7 +11,7 @@ const router = express.Router();
  */
 
  // 로그인 처리.
- router.post('/',isNotLogin,(req,res,next)=>{
+ router.get('/',isNotLoggedIn, (req,res,next)=>{
     console.log('로그인 처리 시작.');
     passport.authenticate('local',(authError,user,info) =>{
         if(authError){  //
@@ -41,6 +41,7 @@ const router = express.Router();
         })
     })(req,res,next);
  });
+
 
 
  module.exports = router;

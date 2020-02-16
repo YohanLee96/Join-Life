@@ -5,7 +5,7 @@
         </div>
         <div class="kd-container-650 kd-login-box">
             <h3 class="kd-login-tit">로그인</h3>
-            <form @submit="onSubmit">
+            <form @submit="onSubmit" method="POST">
                 <div class="kd-login-inputs">
                     <input type="text" id="userId" placeholder="이메일을 입력해주세요." v-model="uid">
                     <label for="userId"></label>

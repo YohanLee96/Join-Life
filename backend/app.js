@@ -7,17 +7,17 @@ const session = require('express-session');
 const history = require("connect-history-api-fallback");
 const logger = require("morgan");
 const passport = require('passport');
-const passportConfig = require('./passport');
+require('dotenv').config();
 
 
 const mainRouter = require("./routes/main/mainController");
 const loginRouter = require('./routes/login/loginController');
-const app = express();
-
-
-
-// Sequelize Sync 
 const models = require("./models");
+
+const passportConfig = require('./passport');
+
+const app = express();
+// Sequelize Sync 
 models.sequelize
   .sync()
   .then(() => {
@@ -31,21 +31,19 @@ models.sequelize
   });
 
 
-//로그인 관련 passport 모듈 연결.
-passportConfig(passport);
+passportConfig(passport);  //로그인 관련 passport 모듈 연결.
 
 console.log('패스포트 셋팅완료..');
 
-//Router 
-app.use("/api", mainRouter);
-app.use("/api/login",loginRouter);
-//Router 끝
+
+
+
 
 app.use(logger("dev"));
+app.use(express.static(path.join(__dirname, "public")));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, "public")));
+app.use(cookieParser(process.env.COOKIE_SECRET));
 app.use(session({ //라우팅 설정 이후에 꼭 넣어줘야됨.
   resave : false,
   saveUninitialized : false,
@@ -55,12 +53,20 @@ app.use(session({ //라우팅 설정 이후에 꼭 넣어줘야됨.
       secure : false, //HTTPS일 경우에만 쿠키를 전송할껀지 처리.
   },
 }));
+
+
+
+
 app.use(flash());
 app.use(passport.initialize()); //request에 passport 설정 심어주는 부분.
 app.use(passport.session());  //세션에 passport 정보 담기.
 
 console.log('패스포트 세션 설정 완료..');
 
+//Router 
+app.use("/api", mainRouter);
+app.use("/api/login",loginRouter);
+//Router 끝
 
 /**
  * vue 연동 모듈
