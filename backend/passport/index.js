@@ -1,4 +1,4 @@
-const local = require('./local');
+const local = require('./localStrategy');
 const {tb_user} = require('../models');
 
 module.exports = (passport) => {

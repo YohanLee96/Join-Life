@@ -11,15 +11,15 @@ const router = express.Router();
  */
 
  // 로그인 처리.
- router.get('/',isNotLogin,(req,res,next)=>{
-    console.log('aa');
+ router.post('/',isNotLogin,(req,res,next)=>{
+    console.log('로그인 처리 시작.');
     passport.authenticate('local',(authError,user,info) =>{
-        if(authError){  //0
+        if(authError){  //
             console.error(authError);
             return next(authError);
         }
 
-        console.log(user);
+        
         if(!user){  //로그인이 안됬을 경우..
             res.json({
                 message : info.message,
@@ -42,7 +42,5 @@ const router = express.Router();
     })(req,res,next);
  });
 
- router.get('/',(req,res,next) =>{
-     console.log('겟로그인!!');
- })
+
  module.exports = router;
